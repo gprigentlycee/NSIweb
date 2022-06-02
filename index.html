@@ -1,46 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>WEB SITE NSI</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEB SITE NSI</title>
 </head>
-
 <body>
-   <script>
-   function recupValeurs() {
-      var cases = document.getElementsByName('test');
-      var resultat = "";
-         for (var i = 0; i < cases.length; i++) {
-            if (cases[i].checked) {
-               resultat += cases[i].value  + ", ";
+<h1>NSIweb</h1>
+<h2>Guillaume Prigent</h2>
+<h1>FORM</h1>
+<input type="checkbox" name="fruits" value="pomme">pomme<br>
+<input type="checkbox" name="fruits" value="poire">poire<br>
+<input type="checkbox" name="fruits" value="banane">banane<br>
+<input type="checkbox" name="fruits" value="abricot">abricot <br>
+<button onclick="recupValeurs();">Envoyer</button>
+<script>
+function recupValeurs() {
+  var cases = document.getElementsByName('fruits');
+  var resultat = "";
+     for (var i = 0; i < cases.length; i++) {
+        if (cases[i].checked) {
+           resultat += cases[i].value  + ", ";
         }
-       }
      }
-   alert("Valeurs sélectionnées : " + resultat);
-   </script>
-   <h1>NSIweb</h1>
-   <h2>Guillaume Prigent</h2>
-   <h1>FORM</h1>
-       <p>
-       <h2>
-           <form action="recolte_donnees.php" method="post">
-           <h2>Fruits</h2>
-       <input type="checkbox" name="fruits[]" id="po">pomme <br>
-       <input type="checkbox" name="fruits[]" id="ba">banane <br>
-       <input type="checkbox" name="fruits[]" id="poi">poire<br>
-       <input type="checkbox" name="fruits[]" id="ab">abricot <br>
-       </p>
-       </h2>
-       <p>
-       <input type="submit" onclick="recupValeurs(); value="envoyer">
-       </p>
-   </form>
+  alert("Valeurs sélectionnées : " + resultat);
+}
+</script>
+  <p>
   <select name="prenom">
     <option value="paul">Paul</option>
     <option value="pierre">Pierre</option>
-  </select>
-</body
+    </select></p>
+</body>
 </html>
