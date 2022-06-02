@@ -7,15 +7,7 @@
   <title>WEB SITE NSI</title>
 </head>
 <body>
-  <h1>NSIweb</h1>
-  <h2>Guillaume Prigent</h2>
-  <h1>FORM</h1>
-  <input type="checkbox" name="fruits" value="pomme">pomme<br>
-  <input type="checkbox" name="fruits" value="poire">poire<br>
-  <input type="checkbox" name="fruits" value="banane">banane<br>
-  <input type="checkbox" name="fruits" value="abricot">abricot <br>
-  <button onclick="recupValeurs();">Envoyer</button>
-<script>
+  <script>
   function recupValeurs() {
     var cases = document.getElementsByName('fruits');
     var resultat = "";
@@ -27,6 +19,14 @@
     alert("Valeurs sélectionnées : " + resultat);
   }
 </script>
+  <h1>NSIweb</h1>
+  <h2>Guillaume Prigent</h2>
+  <h1>FORM</h1>
+  <input type="checkbox" name="fruits" value="pomme">pomme<br>
+  <input type="checkbox" name="fruits" value="poire">poire<br>
+  <input type="checkbox" name="fruits" value="banane">banane<br>
+  <input type="checkbox" name="fruits" value="abricot">abricot <br>
+  <button onclick="recupValeurs();">Envoyer</button>
   <p>
   <select name="prenom">
     <option value="paul">Paul</option>
