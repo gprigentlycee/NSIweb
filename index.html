@@ -10,12 +10,14 @@
 
 <body>
    <script>
-   var cases = document.getElementsByName('test');
-   var resultat = "";
-     for (var i = 0; i < cases.length; i++) {
-        if (cases[i].checked) {
-           resultat += cases[i].value  + ", ";
+   function recupValeurs() {
+      var cases = document.getElementsByName('test');
+      var resultat = "";
+         for (var i = 0; i < cases.length; i++) {
+            if (cases[i].checked) {
+               resultat += cases[i].value  + ", ";
         }
+       }
      }
    alert("Valeurs sélectionnées : " + resultat);
    </script>
@@ -33,7 +35,7 @@
        </p>
        </h2>
        <p>
-       <input type="submit" value="envoyer">
+       <input type="submit" onclick="recupValeurs(); value="envoyer">
        </p>
    </form>
   <select name="prenom">
